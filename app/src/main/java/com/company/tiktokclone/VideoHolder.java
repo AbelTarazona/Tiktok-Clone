@@ -9,11 +9,17 @@ import android.widget.VideoView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.exoplayer2.ExoPlayerFactory;
+import com.google.android.exoplayer2.SimpleExoPlayer;
+import com.google.android.exoplayer2.ui.PlayerView;
+
 public class VideoHolder extends RecyclerView.ViewHolder {
 
-    VideoView videoView;
+    //VideoView videoView;
+    PlayerView videoView;
     TextView user, description, song, comment, like, share;
     ProgressBar progressBar;
+
 
 
     public VideoHolder(@NonNull View itemView) {
@@ -35,6 +41,8 @@ public class VideoHolder extends RecyclerView.ViewHolder {
         comment.setText(item.comment);
         like.setText(item.like);
         share.setText(item.shares);
+
+/*
         videoView.setVideoPath(item.url);
         videoView.setOnPreparedListener(mp -> {
             progressBar.setVisibility(View.GONE);
@@ -49,8 +57,11 @@ public class VideoHolder extends RecyclerView.ViewHolder {
                 videoView.setScaleY(1f / scale);
             }
         });
-        videoView.setOnCompletionListener(mp -> mp.start());
+        videoView.setOnCompletionListener(MediaPlayer::start);
+*/
 
 
     }
+
+
 }

@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/black">
 
-    <VideoView
+<!--    <VideoView
         android:id="@+id/videoview"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -15,7 +15,18 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0" />-->
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/videoview"
+        app:resize_mode="fill"
+        app:use_controller="false"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <ProgressBar
         android:id="@+id/pb"
@@ -25,6 +36,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
         />
 
     <TextView
